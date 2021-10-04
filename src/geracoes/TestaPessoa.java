@@ -100,7 +100,6 @@ public class TestaPessoa {
                     continue;
                 }//catch
             }//for ;;
-
             pess.indicarGeracao(anonasc);
             arraypessoa[k]= pess;
         }//for k;;
@@ -109,11 +108,11 @@ public class TestaPessoa {
 
         mensagem = new StringBuilder();
         for (k=0; k < nropess; k++){
-        pess=arraypessoa[k];
-        //mostra os dados sem ordenação
-        mensagem.append ("Nome da Pessoa: " +pess.getNome()+"\n");
-        mensagem.append ("Ano de nascimento da pessoa: " +pess.getAnonasc()+"\n");
-        mensagem.append ("Geração que a pessoa pertence: " +pess.getGeracao()+"\n\n");
+            pess=arraypessoa[k];
+            //mostra os dados sem ordenação
+            mensagem.append ("Nome da Pessoa: " +pess.getNome()+"\n");
+            mensagem.append ("Ano de nascimento da pessoa: " +pess.getAnonasc()+"\n");
+            mensagem.append ("Geração que a pessoa pertence: " +pess.getGeracao()+"\n\n");
         }//for
         JOptionPane.showMessageDialog(null,mensagem, "Pessoas sem ordenação por ano",
         JOptionPane.INFORMATION_MESSAGE);
@@ -122,28 +121,27 @@ public class TestaPessoa {
 
         mensagem = new StringBuilder();
         for (k=0; k < nropess; k++){
-        pess=arraypessoa[k];
-        //mostra os dados com ordenação
-        mensagem.append ("Nome da Pessoa: " +pess.getNome()+"\n");
-        mensagem.append ("Ano de nascimento da pessoa: " +pess.getAnonasc()+"\n");
-        mensagem.append ("Geração que a pessoa pertence: " +pess.getGeracao()+"\n\n");
+            pess=arraypessoa[k];
+            //mostra os dados com ordenação
+            mensagem.append ("Nome da Pessoa: " +pess.getNome()+"\n");
+            mensagem.append ("Ano de nascimento da pessoa: " +pess.getAnonasc()+"\n");
+            mensagem.append ("Geração que a pessoa pertence: " +pess.getGeracao()+"\n\n");
         }//for
         JOptionPane.showMessageDialog(null,mensagem, "Pessoas com ordenação por ano",
         JOptionPane.INFORMATION_MESSAGE);
 
         mensagem = new StringBuilder();
         for (;;){
-
-                String nome = JOptionPane.showInputDialog("Digite o nome da pessoa ou * para finalizar");
+            String nome = JOptionPane.showInputDialog("Digite o nome da pessoa ou * para finalizar");
             if (nome.equals("*")){
                 mensagem.append ("Programa finalizado com sucesso, Tenha um bom dia!");
                 JOptionPane.showMessageDialog(null,mensagem, "Pessoas com ordenação por ano",
                 JOptionPane.WARNING_MESSAGE);
-            break;
+                break;
             }
-            else{
-            mostraGeracao(nropess, nome);
-                }
+            else {
+                mostraGeracao(nropess, nome);
+            }
         }//for ;;
     }//main
 }// classe TestaPessoa
